@@ -1,6 +1,6 @@
 import math
 # define a function
-def somthing (arg1,arg2):
+def something (arg1,arg2):
     return 'Something'
 
 # It's still work if you don't return
