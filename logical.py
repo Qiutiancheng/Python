@@ -37,10 +37,30 @@
 # loop: A for loop is used for iterating over a sequence.
 # range: 在range函数后的括号内填上数字，就可以获得一个范围。
 
-# for x in range(1,11):
-#     print(str(x)+'+1=',x+1)
-for x in range(1,10):
-    for o in range(1,10):
-        print('{}X{}={}'.format(x,o,x*o))
+# for x in range(1,10):
+#     for o in range(1,10):
+#         print('{}X{}={}'.format(x,o,x*o))
 
-# while
+# while: With the while loop we can execute a set of statements as long as a condition is true.
+
+password_list=['*****','12345']
+def account_login():
+    times = 3
+    while times > 0:
+        password = input('Password:')
+        password_reset = password == password_list[0]
+        password_correct = password == password_list[-1]
+        if password_correct:
+                print('login success!')
+        elif password_reset:
+                new_password = input('please enter a new password:')
+                password_list.append(new_password)
+                print('Your password has changed successfully!')
+                account_login()    
+        else:
+                print('Wrong pass word or invalid input!')
+                times = times - 1
+                print(times,'times left')
+    else:
+        print('Your account has been suspended!')
+account_login()
