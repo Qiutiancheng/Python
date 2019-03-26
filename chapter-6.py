@@ -51,7 +51,7 @@ del newDic['people1']
 # Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
 
 newTuple = ('a','b','c','d','e','f','g')
-print(newTuple[0])
+# print(newTuple[0])
 
 
 
@@ -60,4 +60,20 @@ print(newTuple[0])
 newSet = {1,2,3,4,4}
 newSet.add(5)
 newSet.discard(5)
-print(newSet)
+# print(newSet)
+
+
+
+# ==================================================================== 
+# 数据结构的一些技巧
+num_list = [1,4,6,9,23,11]
+# sorted方法可以给列表排序，设置reverse参数后按照倒序排列
+sort_list = sorted(num_list,reverse=True)
+# print(sort_list)
+
+
+
+# ==================================================================== 
+# 列表解析式/推导式
+list_push = [i for i in range(1,11)]
+print(list_push)
